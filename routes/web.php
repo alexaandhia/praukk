@@ -38,6 +38,8 @@ Route::get('/admin-users', [AdminController::class, 'users'])->name('admin-users
 Route::middleware(['isLogin', 'cekRole:cashier'])->group(function(){
     Route::get('/cashier', [AdminController::class, 'cashier'])->name('cashier');
     Route::get('/cashier-products', [AdminController::class, 'cashier_products'])->name('cashier-products');
+    Route::get('/cashier-add', [AdminController::class, 'cashier_add_transaction'])->name('cashier-add');
+    Route::get('/cashier-transaction', [AdminController::class, 'cashier_transaction'])->name('cashier-transaction');
 });
 
 Route::middleware(['isLogin', 'cekRole:admin,cashier'])->group(function(){
@@ -45,13 +47,6 @@ Route::middleware(['isLogin', 'cekRole:admin,cashier'])->group(function(){
 });
 
 
-Route::get('/cashier-transaction', function () {
-    return view('cashier.transaction');
-});
-
-Route::get('/cashier-add', function () {
-    return view('cashier.add');
-});
 
 Route::get('/cashier-create', function () {
     return view('cashier.create');

@@ -209,6 +209,18 @@ class AdminController extends Controller
         return view('cashier.products', compact('produk'));
     }
 
+    public function cashier_add_transaction()
+    {
+        $produk = Produk::get();
+        return view('cashier.add', compact('produk'));
+    }
+
+    public function cashier_transaction()
+    {
+        $produk = Produk::get();
+        return view('cashier.transaction', compact('produk'));
+    }
+
     /**
      * Show the form for creating a new resource.
      */
