@@ -52,3 +52,7 @@ Route::get('/cashier-create', function () {
     return view('cashier.create');
 });
 
+Route::get('/test', function () {
+    return view('test');
+});
+

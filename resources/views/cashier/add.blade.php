@@ -7,6 +7,7 @@
             <div class="card-body">
                 <div class="text-center container">
                     <div class="row">
+                        <div></div>
                         @foreach($produk as $pdk)
                         <div class="col-lg-4 col-md-6">
                             <div class="card">
@@ -28,6 +29,7 @@
                                                 </tr>
                                             </tbody></table>
                                         </center>
+                                        <p>Sub Total <b><span id="total_{{$pdk->id}}">Rp. 0</span></b></p>
                                 </div>
                             </div>
                         </div>

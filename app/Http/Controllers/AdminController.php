@@ -212,7 +212,7 @@ class AdminController extends Controller
     public function cashier_add_transaction()
     {
         $produk = Produk::get();
-        return view('cashier.add', compact('produk'));
+        return view('cashier.add2', compact('produk'));
     }
 
     public function cashier_transaction()
